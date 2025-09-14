@@ -1,0 +1,39 @@
+# Builder.io Projects Rules
+
+# Project-wide guidelines
+- Use TypeScript for all components and utilities
+- Follow React functional component patterns with hooks
+- Use Tailwind CSS for styling with utility classes
+- Add JSDoc comments to all exported functions and components
+- Use proper TypeScript interfaces for all props
+
+# Component structure
+- Place components in src/components/{ComponentName}.tsx
+- Export components from index files when appropriate
+- Use proper prop validation with TypeScript
+- Follow the existing Hero component pattern for Builder.io integration
+
+# Styling guidelines
+- Use Tailwind CSS utility classes for all styling
+- Prefer responsive design with mobile-first approach
+- Ensure all interactive elements have proper focus states
+- Use semantic HTML elements
+- Follow accessibility best practices
+
+# Builder.io integration
+- Register all custom components with builder.registerComponent()
+- Use proper input types for Builder.io component configuration
+- Include sensible default values for all component inputs
+- Import component registrations in BuilderPage.tsx
+
+# Code organization
+- Keep components focused and single-purpose
+- Use proper file naming conventions (PascalCase for components)
+- Organize imports: React first, then third-party, then local
+- Use absolute imports with @/ prefix for local modules
+
+# Performance
+- Use React.memo() for components that don't need frequent re-renders
+- Implement proper key props for list items
+- Optimize images and assets
+- Use Next.js Image component for all images

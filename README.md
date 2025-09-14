@@ -1,6 +1,6 @@
 # Overhear Builder.io Project
 
-A Next.js website with Builder.io integration, allowing your colleagues to edit content through a visual editor whilst you handle the technical implementation.
+A Next.js website with **dual Builder.io integration**, providing both content management and visual code development capabilities. Your colleagues can edit content through a visual editor whilst you handle technical implementation, and you can also use Builder.io Projects for AI-assisted visual code development.
 
 ## 🚀 Quick Start
 
@@ -24,26 +24,40 @@ npm run dev
 
 Your site will be available at `http://localhost:3000`
 
-## 👥 For Your Colleagues (Visual Editing)
+## 🎯 Two Development Approaches
 
-Your colleagues can edit the website remotely by:
+### **Approach 1: Traditional Builder.io (Content Management)**
+Perfect for your colleagues who need to edit content without touching code.
 
-1. **Going to Builder.io**: Visit [builder.io](https://builder.io) and log in
-2. **Selecting your project**: Choose the project you created
-3. **Using the Visual Editor**: 
+**For Your Colleagues:**
+1. **Go to Builder.io**: Visit [builder.io](https://builder.io) and log in
+2. **Select your project**: Choose the project you created
+3. **Use the Visual Editor**: 
    - Drag and drop components
    - Edit text and images
    - Resize and rearrange elements
    - Preview changes in real-time
    - Publish updates instantly
 
-### Available Components
+**Available Components:**
 - **Hero Section**: Full-width hero with title, subtitle, button, and background image
 - **Text Blocks**: Rich text editing
 - **Images**: Upload and manage images
 - **Buttons**: Customisable call-to-action buttons
 
-## 🛠️ For You (Technical Development)
+### **Approach 2: Builder.io Projects (Visual Code Development)**
+Perfect for you to develop components visually with AI assistance.
+
+**For You (Visual Code Development):**
+1. **Start your dev server**: `npm run dev`
+2. **Launch Builder.io Projects**: `npx "@builder.io/dev-tools@latest" launch`
+3. **Edit code visually**: 
+   - Generate components with AI prompts
+   - Edit your actual source code through Builder's interface
+   - Use AI assistance for rapid prototyping
+   - Make changes directly to your codebase
+
+## 🛠️ Technical Development
 
 ### Project Structure
 ```
@@ -57,13 +71,31 @@ src/
 │   └── Hero.tsx             # Custom Hero component
 └── lib/
     └── builder.ts           # Builder.io configuration
+
+# Builder.io Projects Configuration
+builder.config.json          # Projects configuration
+.builderrules               # AI development rules
+AGENTS.md                   # AI context and guidelines
 ```
 
-### Adding Custom Components
+### Adding Custom Components (Both Approaches)
+
+**For Traditional Builder.io:**
 1. Create a new component in `src/components/`
 2. Register it with Builder.io using `builder.registerComponent()`
 3. Import it in `BuilderPage.tsx`
 4. Your colleagues can now use it in the visual editor
+
+**For Builder.io Projects:**
+1. Use the visual editor to generate components with AI
+2. Or create components in Cursor following the same patterns
+3. Components work in both contexts automatically
+
+### Configuration Files
+
+- **`builder.config.json`**: Configures Builder.io Projects integration
+- **`.builderrules`**: Defines AI coding standards and patterns
+- **`AGENTS.md`**: Provides context for AI-assisted development
 
 ### Firebase Integration (Coming Soon)
 The project is set up to easily integrate with Firebase for dynamic data.
@@ -85,15 +117,20 @@ npm start
 
 # Run linting
 npm run lint
+
+# Builder.io Projects Commands
+npx "@builder.io/dev-tools@latest" launch    # Launch Builder.io Projects
+npx builder.io@latest launch                 # Alternative launch command
 ```
 
 ## 📝 Next Steps
 
 1. **Get your Builder.io API key** and update `.env.local`
-2. **Test the visual editor** by creating a page in Builder.io
-3. **Add more custom components** as needed
-4. **Set up Firebase integration** for dynamic data
-5. **Invite your colleagues** to the Builder.io project
+2. **Test Traditional Builder.io**: Create a page at [builder.io](https://builder.io)
+3. **Test Builder.io Projects**: Run `npm run dev` then `npx "@builder.io/dev-tools@latest" launch`
+4. **Add more custom components** using either approach
+5. **Set up Firebase integration** for dynamic data
+6. **Invite your colleagues** to the Builder.io project
 
 ## 🆘 Troubleshooting
 
