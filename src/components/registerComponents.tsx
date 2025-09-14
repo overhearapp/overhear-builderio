@@ -8,6 +8,7 @@ import RawImg from './RawImg'
 if (typeof builder?.registerComponent === 'function') {
   builder.registerComponent(MainNav, {
     name: 'MainNav',
+    canHaveChildren: true,
     inputs: [
       { name: 'className', type: 'string', defaultValue: '' },
     ],
