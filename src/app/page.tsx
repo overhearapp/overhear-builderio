@@ -1,11 +1,7 @@
-import BuilderPage from '@/components/BuilderPage'
-
-import MyComponent from '@/components/MyComponent'
-
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <MyComponent />
+    <div className="min-h-screen bg-white">
+      {/* Clean blank page - ready for Builder.io content */}
     </div>
   )
 }
