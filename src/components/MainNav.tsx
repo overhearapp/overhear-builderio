@@ -23,7 +23,7 @@ export const MainNav: React.FC<MainNavProps> = React.memo(function MainNav({ cla
     'block px-4 py-2 text-[18px] leading-[26px] text-white hover:text-[#3d9be9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3d9be9]'
 
   return (
-    <nav aria-label="Site" className={['relative z-50 h-12 w-full bg-black', className].filter(Boolean).join(' ')}>
+    <nav aria-label="Site" className={['relative z-50 h-12 w-full bg-[#224175]', className].filter(Boolean).join(' ')}>
       <ul className="relative mx-auto flex h-full w-full items-center justify-center overflow-visible text-center">
         {/* Home */}
         <li className={`group ${baseItemClasses}`}>
