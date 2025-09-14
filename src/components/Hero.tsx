@@ -35,34 +35,36 @@ export function Hero({ title, subtitle, buttonText, buttonLink, backgroundImage 
   )
 }
 
-// Register the component with Builder.io
-builder.registerComponent(Hero, {
-  name: 'Hero',
-  inputs: [
-    {
-      name: 'title',
-      type: 'string',
-      defaultValue: 'Welcome to Our Website',
-    },
-    {
-      name: 'subtitle',
-      type: 'string',
-      defaultValue: 'Create amazing experiences with Builder.io',
-    },
-    {
-      name: 'buttonText',
-      type: 'string',
-      defaultValue: 'Get Started',
-    },
-    {
-      name: 'buttonLink',
-      type: 'string',
-      defaultValue: '/contact',
-    },
-    {
-      name: 'backgroundImage',
-      type: 'file',
-      allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
-    },
-  ],
-})
+// Register the component with Builder.io (only when supported)
+if (typeof builder?.registerComponent === 'function') {
+  builder.registerComponent(Hero, {
+    name: 'Hero',
+    inputs: [
+      {
+        name: 'title',
+        type: 'string',
+        defaultValue: 'Welcome to Our Website',
+      },
+      {
+        name: 'subtitle',
+        type: 'string',
+        defaultValue: 'Create amazing experiences with Builder.io',
+      },
+      {
+        name: 'buttonText',
+        type: 'string',
+        defaultValue: 'Get Started',
+      },
+      {
+        name: 'buttonLink',
+        type: 'string',
+        defaultValue: '/contact',
+      },
+      {
+        name: 'backgroundImage',
+        type: 'file',
+        allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
+      },
+    ],
+  })
+}
