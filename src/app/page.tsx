@@ -45,45 +45,39 @@ export default function Home() {
               </h5>
             </div>
 
-            <div className={`relative w-[455px] mx-[calc(50%_-_490px)] mt-0 mb-8 ${wrapperPointer}`}>
-              <div className="relative w-[455px]">
-                <div className="grid grid-cols-1 grid-rows-1 w-full">
-                  <div className="relative h-[60px] w-[195px] cursor-pointer">
-                    <a
-                      href="https://itunes.apple.com/us/app/overhear/id1279424977?mt=8"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="block h-full w-full"
-                    >
-                      <RawImg
-                        fetchpriority="high"
-                        alt="Apple-Store-Logo"
-                        width={195}
-                        height={60}
-                        image="https://static.wixstatic.com/media/948c86_921596082c98461fafc61aa9a7c9f10c~mv2.png/v1/fill/w_390,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Apple-Store-Logo.png"
-                        className="object-cover h-full w-full"
-                      />
-                    </a>
-                  </div>
+            <div className={`relative w-full max-w-[600px] mx-[calc(50%_-_300px)] mt-0 mb-8 ${wrapperPointer}`}>
+              <div className="flex justify-center items-center gap-4">
+                <a
+                  href="https://itunes.apple.com/us/app/overhear/id1279424977?mt=8"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-block h-[60px]"
+                >
+                  <RawImg
+                    fetchpriority="high"
+                    alt="Apple-Store-Logo"
+                    width={195}
+                    height={60}
+                    image="https://static.wixstatic.com/media/948c86_921596082c98461fafc61aa9a7c9f10c~mv2.png/v1/fill/w_390,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Apple-Store-Logo.png"
+                    className="object-cover h-[60px] w-auto"
+                  />
+                </a>
 
-                  <div className="relative h-[60px] w-[204px] cursor-pointer left-[251px] top-0">
-                    <a
-                      href="https://play.google.com/store/apps/details?id=com.birmingham.overhear"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="block h-full w-full"
-                    >
-                      <RawImg
-                        fetchpriority="high"
-                        alt="download-google-play-store-logo.png"
-                        width={204}
-                        height={60}
-                        image="https://static.wixstatic.com/media/948c86_eda9e0096944455c830e8d0ccb12a996~mv2.png/v1/fill/w_408,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/download-google-play-store-logo.png"
-                        className="object-cover h-full w-full"
-                      />
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.birmingham.overhear"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-block h-[60px]"
+                >
+                  <RawImg
+                    fetchpriority="high"
+                    alt="download-google-play-store-logo.png"
+                    width={204}
+                    height={60}
+                    image="https://static.wixstatic.com/media/948c86_eda9e0096944455c830e8d0ccb12a996~mv2.png/v1/fill/w_408,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/download-google-play-store-logo.png"
+                    className="object-cover h-[60px] w-auto"
+                  />
+                </a>
               </div>
             </div>
 
