@@ -27,6 +27,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="bg-black text-white">
+          {/* Main navigation */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        </div>
         {children}
       </body>
     </html>
