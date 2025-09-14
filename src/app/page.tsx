@@ -2,8 +2,12 @@
 
 import React from 'react'
 import { RawImg } from '@/components'
+import useBuilderEditing from '@/lib/useBuilderEditing'
 
 export default function Home() {
+  const isEditing = useBuilderEditing()
+  const wrapperPointer = isEditing ? 'pointer-events-auto' : 'pointer-events-none'
+
   return (
     <main className="min-h-screen bg-[#224175] text-white">
       {/* Top navigation is rendered in layout */}
@@ -13,8 +17,8 @@ export default function Home() {
           {/* Decorative layers (kept for layout parity) */}
         </div>
 
-        <div className="pointer-events-none relative w-full">
-          <div className="grid grid-cols-1 grid-rows-1 pointer-events-none w-full">
+        <div className={`${wrapperPointer} relative w-full`}>
+          <div className={`grid grid-cols-1 grid-rows-1 ${wrapperPointer} w-full`}>
             <div className="relative h-[363px] w-[375px] mt-[33px] ml-[calc(50%_-_490px)] left-[301px] cursor-pointer">
               <a href="https://www.theoverhear.app/about" target="_self" className="block h-full w-full">
                 <RawImg
@@ -33,15 +37,15 @@ export default function Home() {
 
       <section tabIndex={-1} className="relative w-full min-w-[980px]">
         <div className="absolute inset-0 bg-[#234176]" />
-        <div className="pointer-events-none relative w-full">
-          <div className="grid grid-cols-1 grid-rows-[min-content_1fr] pointer-events-none w-full">
+        <div className={`${wrapperPointer} relative w-full`}>
+          <div className={`grid grid-cols-1 grid-rows-[min-content_1fr] ${wrapperPointer} w-full`}>
             <div className="relative w-[978px] mx-[calc(50%_-_490px)] mt-6 text-center">
               <h5 className="text-[114px] leading-[159.6px] font-light text-[#b2bde6]">
                 <span className="text-white">OVERHEAR</span>
               </h5>
             </div>
 
-            <div className="relative w-[455px] mx-[calc(50%_-_490px)] mt-0 mb-8 pointer-events-none">
+            <div className={`relative w-[455px] mx-[calc(50%_-_490px)] mt-0 mb-8 ${wrapperPointer}`}>
               <div className="relative w-[455px]">
                 <div className="grid grid-cols-1 grid-rows-1 w-full">
                   <div className="relative h-[60px] w-[195px] cursor-pointer">
