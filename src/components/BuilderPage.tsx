@@ -3,6 +3,7 @@
 import { BuilderComponent, builder } from '@builder.io/react'
 import { builder as builderConfig } from '@/lib/builder'
 import '@/components/Hero' // Register Hero component
+import '@/components/registerComponents' // Register additional components for Builder visual editing
 
 interface BuilderPageProps {
   model: string
